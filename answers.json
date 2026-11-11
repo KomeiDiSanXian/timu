@@ -132,7 +132,7 @@
     },
     {
       "题号": "M033-S003",
-      "查询语句": "cert.issuer.org=\"GlobalSign\" && cert.is_valid=true"
+      "查询语句": "cert.issuer.org=\"GlobalSign\" && cert.is_expired=false"
     },
     {
       "题号": "M034-S007",
@@ -148,11 +148,11 @@
     },
     {
       "题号": "M037-S008",
-      "查询语句": "domain=\"sohu.com\" && banner!=\"\" && banner!=\"apache\""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M038-S009",
-      "查询语句": "cert.domain=\"adobe.com\""
+      "查询语句": "cert=\"adobe.com\""
     },
     {
       "题号": "M039-S001",
@@ -168,11 +168,11 @@
     },
     {
       "题号": "M042-S003",
-      "查询语句": "cert.subject=\"example.com\" || cert.domain=\"example.com\""
+      "查询语句": "cert.subject*=\"example.com\" || cert=\"example.com\""
     },
     {
       "题号": "M043-S004",
-      "查询语句": "tls.version=\"TLS 1.0\" && cert.is_valid=true"
+      "查询语句": "tls.version=\"TLS 1.0\" && cert.is_expired=false"
     },
     {
       "题号": "M044-S007",
@@ -188,7 +188,7 @@
     },
     {
       "题号": "M047-S011",
-      "查询语句": "cert.is_match=false"
+      "查询语句": "cert.is_equal=false"
     },
     {
       "题号": "M048-S001",
@@ -228,11 +228,11 @@
     },
     {
       "题号": "M057-S012",
-      "查询语句": "ip=\"13.0.0.0/8\" && status_code=\"200\" && (body=\"Welcome\" || body=\"Sign in\" || body=\"Dashboard\")"
+      "查询语句": "ip=\"13.0.0.0/8\" && type=\"subdomain\" && status_code=\"200\" && (body=\"Welcome\" || body=\"Sign in\" || body=\"Dashboard\")"
     },
     {
       "题号": "M058-S012",
-      "查询语句": "country=\"DE\" && (host*=\"amazonaws.com\" || domain=\"amazonaws.com\" || cname_domain=\"amazonaws.com\" || cert=\"amazonaws.com\" || cert.domain=\"amazonaws.com\")"
+      "查询语句": "country=\"DE\" && (host*=\"amazonaws.com\" || domain*=\"amazonaws.com\" || cname_domain*=\"amazonaws.com\" || cert=\"amazonaws.com\" || cert.domain=\"amazonaws.com\")"
     },
     {
       "题号": "M059-S006",
@@ -260,7 +260,7 @@
     },
     {
       "题号": "M065-S004",
-      "查询语句": "domain=\"baidu.com\" && (title=\"系统\" || title=\"平台\" || title=\"登录\" || title=\"管理\" || title=\"API\" || host*=\"api.baid u.com\" || host*=\"admin.baidu.com\" || host*=\"dev.baidu.com\" || host*=\"test.baidu.com\" || host*=\"uat.baidu.com\" || host*=\"pre.baidu.com\")"
+      "查询语句": "domain=\"baidu.com\" && (title=\"系统\" || title=\"平台\" || title=\"登录\" || title=\"管理\" || title=\"API\" || host*=\"api.baidu.com\" || host*=\"admin.baidu.com\" || host*=\"dev.baidu.com\" || host*=\"test.baidu.com\" || host*=\"uat.baidu.com\" || host*=\"pre.baidu.com\")"
     },
     {
       "题号": "M066-S006",
@@ -268,7 +268,7 @@
     },
     {
       "题号": "M067-S008",
-      "查询语句": "country=\"CN\" && region!=\"HK\" && region!=\"MO\" && region!=\"TW\" && port=\"8888\""
+      "查询语句": "country=\"CN\" && region!=\"Hong Kong\" && region!=\"Macao\" && region!=\"Taiwan\" && port=\"8888\""
     },
     {
       "题号": "M068-S005",
@@ -284,11 +284,11 @@
     },
     {
       "题号": "M071-S006",
-      "查询语句": "country=\"CN\" && region!=\"HK\" && region!=\"MO\" && region!=\"TW\" && app=\"Grafana\""
+      "查询语句": "country=\"CN\" && region!=\"Hong Kong\" && region!=\"Macao\" && region!=\"Taiwan\" && app=\"Grafana\""
     },
     {
       "题号": "M072-S008",
-      "查询语句": "domain*=\".edu.ar\" && (port=\"80\" || port=\"443\") && app!=\"Nginx\" && app!=\"WAF\""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M073-S003",
@@ -320,7 +320,7 @@
     },
     {
       "题号": "M080-S006",
-      "查询语句": "(ip=\"47.96.0.1\" || ip=\"47.96.0.2\" || ip=\"47.96.0.3\" || ip=\"47.96.0.4\" || ip=\"47.96.0.5\") && (port=\"80\" || port=\"443\")"
+      "查询语句": "ip=\"47.96.0.1-47.96.0.5\" && (port=\"80\" || port=\"443\")"
     },
     {
       "题号": "M081-S011",
@@ -328,7 +328,7 @@
     },
     {
       "题号": "M082-S001",
-      "查询语句": "((domain=\"kuaihuoyun.com\" || cert.domain=\"kuaihuoyun.com\") || (domain=\"wlhyos.cn\" || cert.domain=\"wlhyos.cn\") || (domain=\"wlhyos.com\" || cert.domain=\"wlhyos.com\") || (domain=\"56ctms.com\" || cert.domain=\"56ctms.com\") || (domain=\"xiaokuaikeji.com\" || cert.domain=\"xiaokuaikeji.com\") || (domain=\"zhihuiwuliu.org.cn\" || cert.domain=\"zhihuiwuliu.org.cn\")) && cert.is_match=true && cert.is_valid=true && cert.not_after>=\"2024-01-01 00:00:00\" && cert.not_after<=\"2026-08-30 18:17:49\""
+      "查询语句": "((domain=\"kuaihuoyun.com\" || cert.domain=\"kuaihuoyun.com\") || (domain=\"wlhyos.cn\" || cert.domain=\"wlhyos.cn\") || (domain=\"wlhyos.com\" || cert.domain=\"wlhyos.com\") || (domain=\"56ctms.com\" || cert.domain=\"56ctms.com\") || (domain=\"xiaokuaikeji.com\" || cert.domain=\"xiaokuaikeji.com\") || (domain=\"zhihuiwuliu.org.cn\" || cert.domain=\"zhihuiwuliu.org.cn\")) && cert.is_match=true && cert.is_valid=true && cert.not_after.after=\"2024-01-01\" && cert.not_after.before=\"2026-08-30\""
     },
     {
       "题号": "M083-S008",
@@ -364,35 +364,35 @@
     },
     {
       "题号": "M091-S009",
-      "查询语句": ""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M092-S007",
-      "查询语句": ""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M093-S004",
-      "查询语句": "country=\"US\" && country!=\"US\""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M094-S004",
-      "查询语句": ""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M095-S010",
-      "查询语句": ""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M096-S001",
-      "查询语句": "body=\"Jenkins-Agent-Protocols\" || banner=\"Jenkins-Agent-Protocols\" || body=\"Jenkins-Version\" || banner=\"Jenkins-Version\" || body=\"Jenkins-Session\" || banner=\"Jenkins-Session\" || body=\"Client\" || banner=\"Client\" || body=\"Server\" || banner=\"Server\" || body=\"Remoting-Minimum-Version\" || banner=\"Remoting-Minimum-Version\""
+      "查询语句": "(body=\"Jenkins-Agent-Protocols\" || banner=\"Jenkins-Agent-Protocols\" || body=\"Jenkins-Version\" || banner=\"Jenkins-Version\" || body=\"Jenkins-Session\" || banner=\"Jenkins-Session\" || body=\"Client\" || banner=\"Client\" || body=\"Server\" || banner=\"Server\" || body=\"Remoting-Minimum-Version\" || banner=\"Remoting-Minimum-Version\")"
     },
     {
       "题号": "M097-S001",
-      "查询语句": ""
+      "查询语句": "该需求不能直接转换为FOFA搜索语句"
     },
     {
       "题号": "M098-S001",
-      "查询语句": ""
+      "查询语句": "is_fraud=true && host*=\"msp.gov.cn\""
     },
     {
       "题号": "M099-S001",
@@ -400,7 +400,7 @@
     },
     {
       "题号": "M100-S001",
-      "查询语句": "cert.issuer.cn=\"ZeroSSL ECC DV SSL CA 2\" && cert.sn=\"63:BD:83:71:62:14:83:6E:F8:00:75:35:61:61:EB:06\""
+      "查询语句": "cert.issuer.cn=\"ZeroSSL ECC DV SSL CA 2\" && cert.sn=\"132577581667764526475870473477991557894\""
     }
   ]
 }
